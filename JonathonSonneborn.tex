@@ -1,0 +1,90 @@
+\documentclass[letterpaper,11pt]{article}
+
+% Adjust margins
+\usepackage[margin=0.75in]{geometry}
+
+% Font and encoding
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% For links
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+
+% Images
+\usepackage{graphicx}
+
+
+% Formatting for sections
+\usepackage{titlesec}
+\titleformat{\section}{
+  \vspace{4pt}\scshape\raggedright\large
+}{}{0em}{}[\titlerule\vspace{4pt}]
+
+\begin{document}
+
+% Header
+\begin{center}
+  {\Huge Jonathon Sonneborn} \\
+  \vspace{2pt}
+  Ann Arbor, MI \quad | \quad (269) 601-2900 \\
+  \small \href{mailto:sonnejm@umich.edu}{sonnejm@umich.edu} \quad | \quad
+  \href{https://www.linkedin.com/in/sonnejm/}{
+    \includegraphics[height=0.3cm]{images/LI-In-Bug.png}
+    linkedin.com/in/sonnejm
+  } \quad | \quad
+  \href{https://github.com/joltedjon}{
+    \includegraphics[height=0.3cm]{images/github-mark.png}
+    github.com/JoltedJon
+  } \\
+  \vspace{6pt}
+\end{center}
+
+% Education
+\section*{Education}
+\textbf{University of Michigan, College of Engineering} \hfill Ann Arbor, MI \\
+B.S.E. in Computer Science, Minor in Electrical Engineering \hfill Expected Graduation: April 2024 \\
+GPA: 3.1
+
+% Skills
+\section*{Technical Skills}
+\textbf{Languages:} C++, SystemVerilog, Java, JavaScript, HTML, SQL, Bash, Python, RISC-V \\
+\textbf{Tools:} Git, Linux, Docker, sqlite3, Make, REST API \\
+\textbf{Frameworks:} NCurses, React, Flask
+
+% Experience
+\section*{Work Experience}
+\textbf{EECS DCO Computer Consultant} \hfill January 2023 - Present \\
+\textit{University of Michigan}, Ann Arbor \\
+- Provided technical support to faculty, staff, and students on computer and networking issues \\
+- Assisted in the setup and maintenance of computer labs and classrooms \\
+- Managed user accounts and permissions on Windows and Linux systems
+
+% Projects
+\section*{Projects}
+\textbf{Fully Synthesizable P6 N-Way Superscalar Processor} \hfill EECS 470 Computer Architecture \\
+\textit{Collaborative Project with a team of 7} \\
+- Contributed to the development of a fully synthesizable Out of Order P6 N-way superscalar RISC-V processor, emphasizing high performance and efficient execution. \\
+- Independently developed a visual debugger for the processor in C++,
+utilizing Ncurses to enhance debugging capabilities.
+Innovatively employed pipes for inter-process communication between the SystemVerilog code
+and the C++ code, enabling real-time data exchange.
+
+\textit{Technologies Used:} SystemVerilog, C++, Ncurses \\
+
+\noindent \textbf{Server Filesystem in C++} \hfill EECS 482/498 Intro to Operating Systems \\
+- Engineered a server filesystem in C++ enabling client command processing via sockets.
+Implemented dynamic memory allocation for upgradeable reader-writer locks,
+facilitating multiple readers or exclusive writer access.
+
+\textit{Technologies Used:} C++, Sockets, Smart Pointers, Threads \\
+
+
+\noindent \textbf{Instagram Clone with React and JavaScript} \hfill EECS 485 Web Systems \\
+- Developed a client-side dynamic Instagram clone using React and JavaScript,
+featuring infinite scroll. Integrated a REST API and Flask for backend communication,
+with SQLite3 for database management.
+
+\textit{Technologies Used:} Python, JavaScript, React, SQLite3, Flask
+
+\end{document}
