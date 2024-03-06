@@ -1,4 +1,4 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[9pt]{extarticle}
 
 % Adjust margins
 \usepackage[margin=0.25in]{geometry}
@@ -18,8 +18,9 @@
 % Formatting for sections
 \usepackage{titlesec}
 \titleformat{\section}{
-  \vspace{4pt}\scshape\raggedright\large
-}{}{0em}{}[\titlerule\vspace{4pt}]
+  \vspace{0pt}\scshape\raggedright\large
+}{}{0em}{}[\titlerule\vspace{0pt}]
+
 
 \begin{document}
 
@@ -47,9 +48,11 @@ B.S.E. in Computer Science, Minor in Electrical Engineering \hfill Expected Grad
 
 % Skills
 \section*{Technical Skills}
-\textbf{Languages:} C++, SystemVerilog, Java, JavaScript, HTML, SQL, Bash, Python, RISC-V, ARM, x86 \\
+\textbf{Languages:} C++, SystemVerilog, Rust, Scheme, Java, JavaScript, HTML, SQL, Bash, Python, RISC-V, ARM, x86 \\
 \textbf{Tools:} Git, Linux, Docker, SQLite3, Make, REST API \\
-\textbf{Frameworks:} Ncurses, React, Flask
+\textbf{Frameworks:} Ncurses, React, Flask, Boost \\
+\textbf{Classes:} Operating Systems, Web Systems, Database Management, Computer Architecture, Computer Security, Data Structures and Algorithms, Computer Pragmatics, Computer Paradigms\\
+\textbf{Operating Systems:} Ubuntu Linux, Arch Linux, Windows, MacOS
 
 % Experience
 \section*{Work Experience}
@@ -61,30 +64,44 @@ B.S.E. in Computer Science, Minor in Electrical Engineering \hfill Expected Grad
 
 % Projects
 \section*{Projects}
-\textbf{Nintendo Entertainment System Emulator} \\
+\noindent \textbf{Nintendo Entertainment System Emulator}
 - Currently developing a Nintendo Entertainment System (NES) emulator using Rust.
-Demonstrating strong programming skills and understanding of computer architecture
-to design and implement key components for accurate emulation.
-Showcasing proficiency in low-level programming and commitment to tackling complex challenges in systems development. \\
-\textit{Technologies Used:} Rust, SDL2 \\
+Fully functional 6502 processor emulator with correct cycle. Will have video and audio capabilities, and ability to interface with controllers.
+
+\indent \textit{Technologies Used:} Rust, SDL2, Memory Mapped IO
 
 \noindent \textbf{Fully Synthesizable P6 N-Way Superscalar Processor} \\
 \textit{Collaborative Project with a team of 7} \\
-- Contributed to the development of a fully synthesizable Out of Order P6 N-way superscalar RISC-V processor, emphasizing high performance and efficient execution. \\
+- Contributed to the development of a fully synthesizable Out of Order P6 N-way superscalar RISC-V processor, emphasizing high performance and efficient execution.
+Developed working branch predictor, 32-bit multiplier, Reorder buffer, functional units, Common Data Bus, and Early Branch Resolution.  \\
 - Independently developed a visual debugger for the processor in C++,
 utilizing Ncurses to enhance debugging capabilities.
-Innovatively employed pipes for inter-process communication between the SystemVerilog code
+Employed the use of linux pipes for inter-process communication between the SystemVerilog code
 and the C++ code, enabling real-time data exchange.
 
-\textit{Technologies Used:} SystemVerilog, C++, Ncurses \\
+\textit{Technologies Used:} SystemVerilog, C++, Ncurses
 
-\noindent \textbf{Server Filesystem in C++} \\
+\noindent \textbf{Network Filesystem} \\
 - Engineered a server filesystem in C++ enabling client command processing via sockets.
 Implemented dynamic memory allocation for upgradeable reader-writer locks,
-facilitating multiple readers or exclusive writer access.
+facilitating multiple readers or exclusive writer access. Dynamically allocating the locks, making use of RAII design principle and smart pointers.
 
-\textit{Technologies Used:} C++, Sockets, Smart Pointers, Threads \\
+\textit{Technologies Used:} C++, Sockets, TCP, Smart Pointers, Threads, Boost Library
 
+\noindent \textbf{Thread Library} \\
+- Designed and implemented a functional thread library. Dynamically created contexts that could be swapped to.
+Included feature to acquire mutexes, and atomically put context on waiting queue and drop mutex lock by implementing a Condition Variable class.
+Could properly handle multiple processors attempting to access the thread library by utilizing atomic guards, and spin locks.
+
+\textit{Technologies Used:} C++, Interrupts, Library Implementation, Multiprocessor, Object Oriented Programming
+
+
+\noindent \textbf{Memory Page Table}\\
+- Created an OS page table that allocated space in RAM for pages. Could handle swap-backed and file-backed pages.
+Would evict pages from the page table in order for the computer to allocate more space in RAM.
+Processes that were forked would share pages, and would enact a copy-on-write policy to efficiently use the RAM space.
+
+\textit{Technologies Used:} C++, Smart Pointers, Object Oriented Programming
 
 \noindent \textbf{Instagram Clone with React and JavaScript} \\
 - Developed a client-side dynamic Instagram clone using React and JavaScript,
@@ -92,5 +109,21 @@ featuring infinite scroll. Integrated a REST API and Flask for backend communica
 with SQLite3 for database management.
 
 \textit{Technologies Used:} Python, JavaScript, React, SQLite3, Flask
+
+\noindent \textbf{Scheme Lexer} \\
+- Built a Lexer for a subset of R5RS Compliant Scheme. Could produce tokens that could be parsed and interpretted.
+
+\textit{Technologies Used:} Scheme, Functional Programming
+
+\noindent \textbf{Web Security} \\
+- Simulated attacking a provided insecure website using SQL
+injection, cross-site scripting (XSS), and cross-site request forgery
+(CSRF). Learned to spot common vulnerabilities and the
+weaknesses of naive defenses to avoid using them in personal web
+applications.
+- Examined and exploited C code that was vulnerable to buffer overflow attacks. Utilized Ghidra to
+decompile executable to spot any potential vulnerabilities.
+
+\textit{Technologies Used:} Python, Javascript, Ghidra, C
 
 \end{document}
