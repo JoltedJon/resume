@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind utilities;
+
+html {
+  width: 8.5in;
+  height: 11in;
+
+  padding: 0.20in;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 9pt;
+
+  @media screen {
+    border: 1px solid black;
+    box-shadow: 5px 5px 15px black;
+    margin: calc((100vh - 11in) / 2) auto;
+  }
+}
+
+ul {
+  > li {
+    &::before {
+      content: " ";
+      display: inline-block;
+      background-color: black;
+      width: 0.5em;
+      height: 0.5em;
+      border-radius: 50%;
+      margin-bottom: 0.15rem;
+      margin-right: 0.4rem;
+    }
+
+    display: block;
+
+    // Width of &::before including margins
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+}

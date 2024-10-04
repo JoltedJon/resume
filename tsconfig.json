@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ES2017",
+    "moduleResolution": "Node",
+    "strict": true
+  },
+  "include": ["./*.ts"]
+}
